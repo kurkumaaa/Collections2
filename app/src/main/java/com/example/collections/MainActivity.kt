@@ -96,3 +96,10 @@ fun exampleMaps() {
     solarSystem["Jupiter"] = 78
     println(solarSystem["Jupiter"])
 }
+
+fun main() {
+    //exampleArrays()
+    exampleLists()
+    //exampleSets()
+    //exampleMaps()
+}
