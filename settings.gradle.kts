@@ -24,4 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Collections"
 include(":app")
- 
+include(":collections-runner")
