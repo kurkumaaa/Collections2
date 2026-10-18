@@ -1,47 +1,24 @@
 package com.example.collections
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.collections.ui.theme.CollectionsTheme
+fun exampleArrays() {
+    val rockPlanets = arrayOf("Mercury", "Venus", "Earth", "Mars")
+    val gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
+    val solarSystem = rockPlanets + gasPlanets
+    println(solarSystem[0])
+    println(solarSystem[1])
+    println(solarSystem[2])
+    println(solarSystem[3])
+    println(solarSystem[4])
+    println(solarSystem[5])
+    println(solarSystem[6])
+    println(solarSystem[7])
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            CollectionsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-    }
-}
+    solarSystem[3] = "Little Earth"
+    println(solarSystem[3])
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+    val newSolarSystem = arrayOf(
+        "Mercury", "Venus", "Earth", "Mars", "Jupiter",
+        "Saturn", "Uranus", "Neptune", "Pluto"
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CollectionsTheme {
-        Greeting("Android")
-    }
+    println(newSolarSystem[8])
 }
